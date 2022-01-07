@@ -1,0 +1,14 @@
+When the static keyword preceded the declaration of a variable, that variable becomes a static variable.
+
+Syntax:
+static <type> <variable_name>;
+
+A static keyword serves a different purpose depending on where it has been declared.
+
+If it is declared inside of a class, all instances of the class (i.e. objects) will share the same copy of the variable, and we can access it without any object by 
+class name outside the class.
+
+If it is declared inside of a function then its value is preserved between successive calls for the lifetime of the program, but it cannot be accessd outside the 
+scope or function in which it is declared.
+
+

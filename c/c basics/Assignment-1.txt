@@ -1,0 +1,213 @@
+1.difference between printf and scanf
+Printf:
+        printf is a short form of print formatted. This function is designed to display any formatted content or output
+ that is requested by the user. The name was coined back in the earlier coding days when the main source of displaying output
+ was the printer instead of the high-tech video displays we have today.
+
+In C language, printf() is used in the following ways:
+
+It is used whenever an integer, character, float, octal, string or hexadecimal value needs to be printed onto the screen
+When using print f, we use the following specifiers for each of the above-mentioned data types:
+%d- integer
+%c-character
+%f-float variable
+%s-string
+%If-for double
+%x-hexadecimal variable
+\n- generate a new line
+%o- octal value
+
+Scanf:
+      scanf can be considered the polar opposite of printf in that it is used to input certain content (such as specific 
+variables) by the user into the code for testing. In other terms, it is used to read numeric data, string and characters that 
+have been inputted from the keyboard.
+
+Scanf is used in the following ways:
+
+As aforementioned, scanf is used to input user information typed from the keyboard.
+When values are keyed in, they are assigned in the following ways:
+“ch”- character
+“str”-string
+%d-integer
+%s-string
+
+Both printf and scanf are library functions that have been inbuilt within the C programming; meaning they are default within C.
+ Hence, we have to call out the library by using ‘stdio.h’ before using these functions.
+
+program:
+#include<stdio.h>    
+int main(){    
+int number;    
+printf("enter a number:");    
+scanf("%d",&number);   //reads integer number from the console and stores the given value in number variable.  
+printf("cube of number is:%d ",number*number*number);    
+return 0;  
+}   
+
+--------------------------------------------------------------------------------------------------------------------
+
+2. pre&post incrementation and pre&post decrementation(unary operators)
+#include <stdio.h>   
+int main ()  
+{  
+     int a=1;
+     printf("%d\n",a++);   //1
+     printf("%d\n",++a);   //3
+     printf("%d\n",a--);   //3
+     printf("%d\n",--a);   //1
+     return 0;
+}
+
+-----------------------------------------------------------------------------------------------------------------------
+
+3. declaration and printing the size of int char float double
+#include<stdio.h>
+int main() {
+    int i;
+    float f;
+    double d;
+    char c;
+    printf("Size of int: %zu bytes\n", sizeof(i));
+    printf("Size of float: %zu bytes\n", sizeof(f));
+    printf("Size of double: %zu bytes\n", sizeof(d));
+    printf("Size of char: %zu byte\n", sizeof(c));
+    return 0;
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+4. write a c code to compare 2 numbers using conditional operators
+
+#include <stdio.h>
+int main()
+{
+int x=10, y=5 ;
+y = ( x>y ? printf("x is greater") : printf("y is greater") ) ;
+}
+
+output: x is greater
+
+---------------------------------------------------------------------------------------------------------------------------
+
+5. write a c code without semicolon
+
+#include<stdio.h>
+int main() 
+ {
+   if(printf("Hello World")) 
+   {
+   }
+ }
+
+output: Hello World
+
+---------------------------------------------------------------------------------------------------------------------------
+
+6. can we write a c code without using main funtion?
+- We can write c program without using main() function. To do so, we need to use #define preprocessor directive.
+- The C preprocessor is a micro processor that is used by compiler to transform your code before compilation. It 
+is called micro preprocessor because it allows us to add macros.A macro is a segment of code which is replaced 
+by the value of macro. Macro is defined by #define directive.
+- Using a macro that defines main
+
+#include<stdio.h>
+#define fun main
+int fun(void)
+{
+    printf("Ramya");
+    return 0;
+}
+- Using Token-Pasting Operator
+
+#include<stdio.h>
+#define fun m##a##i##n
+int fun()
+{
+    printf("Ramya");
+    return 0;
+}
+- Using Argumented Macro
+
+#include<stdio.h>
+#define begin(m,a,i,n) m##a##i##n
+#define start begin(m,a,i,n)
+  
+void start() {
+   printf("Ramya");
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+7. logical operators
+
+#include <stdio.h>
+ 
+int main()
+{
+    int a = 10, b = 4, c = 10, d = 20;
+    if (a > b && c == d){
+        printf("a is greater than b AND c is equal to d\n");
+    }
+    else{
+        printf("AND condition not satisfied\n");
+    }
+ 
+    if (a > b || c == d){
+        printf("a is greater than b OR c is equal to d\n");
+    }
+    else{
+        printf("Neither a is greater than b nor c is equal "
+               " to d\n");
+    }
+ 
+    if (!a){
+        printf("a is zero\n");
+    }
+    else{
+        printf("a is not zero");
+    }
+ 
+    return 0;
+}
+
+--------------------------------------------------------------------------------------------------------
+
+8. Precedence & Associativity
+Precedence of operators
+        The precedence of operators determines which operator is executed first if there is more than one operator in an expression.
+for example:
+int x = 5 - 17* 6;
+In C, the precedence of * is higher than - and =. Hence, 17 * 6 is evaluated first. Then the expression involving - is evaluated
+ as the precedence of - is higher than that of =.
+Associativity of Operators
+        The associativity of operators determines the direction in which an expression is evaluated. 
+For example,
+b = a;
+Here, the value of a is assigned to b, and not the other way around. It's because the associativity of the = operator is from right to left.
+
+a++ = ++a in this associativity will be from right to left
+
+-----------------------------------------------------------------------------------------------------------
+
+9. Different types of c topens.
+   Tokens in c are most important elements to be used in creating a c program and those are divided into following categories
+   a.Keywords:
+          These are pre-defined and reserved words havng its own imporatance and functionality. there are 32 keywords in c.
+   Auto, Break, Case, Char,Const,Continue,Default,Double,Enum,Extern,Float,For,Goto,If,Int,Long,Register,Return,Short,Signed,Sizeof
+   Static,Struct,Switch,Typeof,Union,Unsigned,Void,Volatile,While,Do,Else.
+   b.Identifiers:
+           Used for naming variables, functions, arrays, structures, etc..these Identifiers are user-defined words. Identifiers can't 
+   start with number and space is not allowed.
+   c.Constant: 
+           A constant is a value assigned to a variable which remains same throughout the program. there are 2 ways declaring it
+           i. using const keyword
+           ii.using #define
+   d.Strings: 
+           array of characters enclosed within single quotes and having null character '\0' at the end. Strings are enclosed in double quotes
+           i. char a[5]="ramya"
+           ii.char a[5]={'r','a','m','y','a','\0'}
+   e. Operators in C:
+           Special symbols used to perform functions.
+           i. arithmetic ii. relational iii.assignment iv.conditional v.bitwise vi. Logical

@@ -1,0 +1,17 @@
+#include <stdio.h>
+void main()
+{
+int n=2,x=16,prime=1;
+repeat:
+if(x%n==0){
+prime=0;
+}
+n++;
+if(n<x) goto repeat;
+if(prime==0){
+printf("the number is not a prime number.");
+}
+else{
+printf("the number is a prime number.");
+}
+}

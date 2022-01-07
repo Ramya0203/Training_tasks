@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+   int a = 8;
+   int& b = a;
+   cout << "The variable a : " << a;
+   cout << "\nThe reference variable r : " << b;
+   return 0;
+}
+
+output:
+The variable a : 8
+The reference variable r : 8

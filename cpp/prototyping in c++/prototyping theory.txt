@@ -1,0 +1,15 @@
+Function prototyping is a function declaration statement that tells the compiler about the return type of the function and the number as well as type of 
+arguments required by the function at the time of calling it.
+
+The Function prototype serves the following purposes – 
+1) It tells the return type of the data that the function will return. 
+2) It tells the number of arguments passed to the function. 
+3) It tells the data types of each of the passed arguments. 
+4) Also it tells the order in which the arguments are passed to the function.
+Therefore essentially, the function prototype specifies the input/output interlace to the function i.e. what to give to the function and what to expect from 
+the function.
+
+Advantages of function prototype :
+- It helps the compiler in determining whether a function is called correctly or not. Each time when a function is called, its calling statement is compared
+  with its prototype. In case of any mismatch, compiler reports an error.
+- A function must be defined before calling it. But prototyping allows a function to be called before defining it.

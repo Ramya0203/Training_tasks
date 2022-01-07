@@ -1,0 +1,3 @@
+A function becomes const when the const keyword is used in the function’s declaration. The idea of const functions is not to allow them to modify the object on which 
+they are called.
+When a function is declared as const, it can be called on any type of object, const object as well as non-const objects.

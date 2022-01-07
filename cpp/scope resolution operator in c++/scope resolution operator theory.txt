@@ -1,0 +1,15 @@
+In C++, scope resolution operator is ::. The scope resolution operator is used to reference the global variable or member function that is out of scope. 
+Therefore, we use the scope resolution operator to access the hidden variable or function of a program.
+For example, when the global and local variable or function has the same name in a program, and when we call the variable, by default it only accesses 
+the inner or local variable without calling the global variable. In this way, it hides the global variable or function. To overcome this situation, we use 
+the scope resolution operator to fetch a program's hidden variable or function. The scope resolution opeator is used for following purposes.
+
+1. To access a global variable when there is a local variable with same name
+2. It defines the member function outside of the class
+3. to access the static variable and static function of a class
+4. In case of multiple Inheritance:If same variable name exists in two ancestor classes, we can use scope resolution operator to distinguish.
+5. Refer to a class inside another class:If a class exists inside another class we can use the nesting class to refer the nested class using the scope 
+   resolution operator
+
+
+

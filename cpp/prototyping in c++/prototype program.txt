@@ -1,0 +1,16 @@
+#include<iostream.h>
+#include<conio.h>
+
+void msg(void); 
+
+void main()
+{
+   clrscr();
+   msg();
+   getch();
+}
+void msg(void) 
+{
+   cout<<"Welcome to the world\n";
+   cout<<"This is C++ Function Prototype & Definition Tutorial";
+}

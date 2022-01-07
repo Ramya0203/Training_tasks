@@ -1,0 +1,13 @@
+A function that is declared static using the ‘static‘ keyword becomes a static function in C++.
+
+Syntax of the Static Function:
+
+static <return_type> <function_name>(<arguments>)
+When a function inside a class is declared as static, it can be accessed outside the class using the class name and scope resolution operator (::), without creating
+any object.
+
+A static member method has access only to the static members of the class, we can not call any non-static functions inside it.
+
+All objects in the class share the same copy of the static function. It is useful in manipulating global static variables, which are again shared by all objects.
+
+Since the static function is not bounded by the object of the class, it does not has access to the this keyword.

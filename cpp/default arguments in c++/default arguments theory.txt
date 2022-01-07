@@ -1,0 +1,18 @@
+A default argument is a value in the function declaration automatically assigned by the compiler if the calling function does not pass any value to that argument.
+
+Following are the rules of declaring default arguments -
+1. The values passed in the default arguments are not constant. These values can be overwritten if the value is passed to the function. If not, the previously declared value retains.
+   During the calling of function, the values are copied from left to right.
+2. All the values that will be given default value will be on the right.
+
+advantages of default arguments -
+
+-reduces the listing of the program code by avoiding writing unnecessary functions that perform the same work only with other values of the arguments
+-provides a simple, natural and effective programming style
+
+disadvantages of default arguments -
+
+-You cannot use local variables in default argument expressions.
+-Once a default argument has been given in a declaration or definition, you cannot redefine that argument, even to the same value. However, you can add default arguments not given in 
+previous declarations.
+-Parameters with default arguments must be the trailing parameters in the function declaration parameter list.

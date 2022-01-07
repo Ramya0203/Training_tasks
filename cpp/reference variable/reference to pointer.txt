@@ -1,0 +1,32 @@
+#include <iostream>
+  
+using namespace std;
+  
+int gobal_var = 42;
+  
+void changeReferenceValue(int*& pp)
+{
+    pp = &gobal_var;
+}
+  
+int main()
+{
+    int var = 23;
+    int* ptr_to_var = &var;
+  
+    cout << "Passing a Reference to a pointer" << endl;
+  
+    cout << "Before :" << *ptr_to_var << endl;
+  
+    changeReferenceValue(ptr_to_var);
+  
+    cout << "After :" << *ptr_to_var << endl; 
+  
+    return 0;
+}
+
+output:
+
+Passing a Reference to a pointer
+Before :23
+After :42
